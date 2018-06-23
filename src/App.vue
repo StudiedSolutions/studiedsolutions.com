@@ -1,18 +1,16 @@
 <template>
-  <v-app>
-    <v-toolbar fixed app class="nav-bar">
-      <v-toolbar-title v-text="title" class="title"></v-toolbar-title>
+  <v-app light>
+    <v-toolbar fixed class="white">
+      <v-toolbar-title v-text="title"></v-toolbar-title>
       <v-spacer></v-spacer>
-      <router-link to="/about" class="nav-link">About</router-link>
-      <router-link to="/contact" class="nav-link">Contact</router-link>
     </v-toolbar>
     <v-content>
-      <v-container fluid>
-        <router-view></router-view>
-      </v-container>
+      <router-view></router-view>
     </v-content>
     <v-footer :fixed="fixed" app>
-      <span>&copy; 2017</span>
+      <v-layout justify-center>
+      <span>&copy; 2018 Studied Solutions, LLC.</span>
+      </v-layout>
     </v-footer>
   </v-app>
 </template>
@@ -35,18 +33,3 @@
     }
   }
 </script>
-<style>
-.nav-bar {
-  font-size: 16px;
-  height: 80px;
-}
-
-.title {
-  font-size: 2em;
-}
-
-.nav-link {
-  padding-left: 20px;
-  font-size: 2em;
-}
-</style>
