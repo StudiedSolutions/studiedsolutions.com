@@ -123,7 +123,6 @@
         v-model="phone"
         label="Phone"
         mask="phone"
-        required
       ></v-text-field>
       <v-select
         :items="items"
@@ -144,6 +143,15 @@
         :disabled="loading"
       >
         <v-icon x-large class="green--text text--lighten-2">check_circle</v-icon>
+      </v-btn>
+
+      <v-btn
+        v-else-if="failure"
+        @click="submit"
+        :loading="loading"
+        :disabled="loading"
+      >
+        <v-icon x-large class="red--text text--lighten-2">error</v-icon>
       </v-btn>
 
       <v-btn
@@ -174,6 +182,7 @@ import Axios from 'axios';
         help: "",
         loading: false,
         success: false,
+        failure: false,
         preference: "",
         items: [
           { text: "Phone" },
@@ -191,7 +200,7 @@ import Axios from 'axios';
       },
       submit () {
         this.loading = true;
-        Axios.post('https://formspree.io/tomcgee1@gmail.com',
+        Axios.post('https://formspree.io/xekzzjkx',
         {
           name: this.name,
           email: this.email,
@@ -202,6 +211,11 @@ import Axios from 'axios';
         .then((response) => {
           this.loading = false;
           this.success = true;
+          this.failure = false;
+        }).catch((response) => {
+          this.loading = false;
+          this.failure = true;
+          this.success = false;
         });
       },
       clear () {
@@ -211,6 +225,7 @@ import Axios from 'axios';
         this.help =  "";
         preference: "";
         this.success =  false;
+        this.failure =  false;
       }
     }
   }
