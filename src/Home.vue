@@ -83,7 +83,7 @@
                       <div class="headline text-xs-center">Quality</div>
                     </v-card-title>
                     <v-card-text name="ScrollHere" class="scrollHere">
-                      We have experience consulting on Agile Best Practices, Test Driven Development, and bringing technical expertise to any project.
+                      We have experience consulting on Agile Best Practices, Test Driven Development, and bringing Technical Expertise to any project.
                       <br/>
                       <br/>
                       As generalists our Senior Developers are able to instantly provide value, whether joining an existing team, or leading the charge on new development.
@@ -125,6 +125,12 @@
         mask="phone"
         required
       ></v-text-field>
+      <v-select
+        :items="items"
+        v-model="preference"
+        label="Contact Method"
+        single-line
+      ></v-select>
       <v-text-field
         v-model="help"
         label="How can we help?"
@@ -168,6 +174,11 @@ import Axios from 'axios';
         help: "",
         loading: false,
         success: false,
+        preference: "",
+        items: [
+          { text: "Phone" },
+          { text: "Email" },
+        ]
       }
     },
     methods: {
@@ -185,6 +196,7 @@ import Axios from 'axios';
           name: this.name,
           email: this.email,
           phone: this.phone,
+          preference: this.preference,
           request: this.help,
         })
         .then((response) => {
@@ -197,6 +209,7 @@ import Axios from 'axios';
         this.email = "";
         this.phone = "";
         this.help =  "";
+        preference: "";
         this.success =  false;
       }
     }
