@@ -1,7 +1,7 @@
 <template>
   <v-app light>
     <v-toolbar fixed class="white">
-      <v-toolbar-title v-text="title"></v-toolbar-title>
+      <v-toolbar-title v-text="title" class="logo"></v-toolbar-title>
       <v-spacer></v-spacer>
     </v-toolbar>
     <v-content>
@@ -33,3 +33,21 @@
     }
   }
 </script>
+
+<style>
+.logo {
+	font-size: 12px;
+	font-weight: 600;
+	letter-spacing: .02em;
+	margin-left: 16px;
+	letter-spacing: 1px;
+	white-space: nowrap;
+	border: 1px solid #9a9a9a;
+	/* color: white; */
+	padding: .5rem;
+	overflow: hidden;
+	background: #ffffff;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+}
+</style>
