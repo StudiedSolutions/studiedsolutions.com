@@ -15,12 +15,13 @@
         <h1 class="white--text mt-5 display-2 text-xs-center">Building Better Software</h1>
         <h1 class="white--text mt-2 display-3 text-xs-center">Together</h1>
         <v-btn
-            class="green darken-4 mt-5"
+            class="mt-5"
+            color="info"
             dark
             large
             @click="moreInfo"
             >
-            Contact Us
+            Let's Chat
         </v-btn>
           </v-layout>
         </v-container>
@@ -36,9 +37,9 @@
           <v-flex xs12 sm4 class="my-3">
             <div class="text-xs-center">
               <h2 class="display-3">Our Values</h2>
-              <span class="display-1">
+              <h3 class="display-1">
                 Why we're so awesome to work with
-              </span>
+              </h3>
             </div>
           </v-flex>
           <v-flex xs12>
@@ -53,7 +54,7 @@
                       <div class="headline text-xs-center">Communication</div>
                     </v-card-title>
                     <v-card-text>
-                      We start by making sure we understand your application and it's domain, getting a clear overview of exactly what you want done and why.
+                      We start by making sure we understand your application, your domain, and getting a clear overview of exactly what you want done and why.
                       <br/><br/>Daily updates of what we work on, what's up next, and any questions we might have.
 
                     </v-card-text>
@@ -97,19 +98,16 @@
       </section>
       <section>
         <v-layout
-          column
           wrap
           class="my-5 odd"
-          align-center
-          white--text
+          justify-center
         >
-          <v-flex xs12 sm4 class="my-3">
+          <v-flex xs12 sm5 class="my-5">
             <div class="text-xs-center">
-              <h2 class="display-3">Contact Us</h2>
+              <h2 class="white--text display-3 mb-3">Ready to get started?</h2>
             </div>
 		<v-form class="form pa-5" ref="form">
       <v-text-field
-        white--text
         v-model="name"
         label="Name"
         required
@@ -136,6 +134,10 @@
         required
         multi-line
       ></v-text-field>
+        <v-flex
+        class="layout"
+        justify-center
+          >
       <v-btn
         v-if="success"
         @click="submit"
@@ -163,6 +165,7 @@
         submit
       </v-btn>
       <v-btn @click="clear">clear</v-btn>
+        </v-flex>
     </v-form>
           </v-flex>
         </v-layout>
