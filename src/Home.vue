@@ -38,7 +38,7 @@
             <div class="text-xs-center">
               <h2 class="display-3">Our Values</h2>
               <h3 class="display-1">
-                Why we're so awesome to work with
+                Why people love working with us
               </h3>
             </div>
           </v-flex>
@@ -104,7 +104,7 @@
         >
           <v-flex xs12 sm5 class="my-5">
             <div class="text-xs-center">
-              <h2 class="white--text display-3 mb-3">Ready to get started?</h2>
+              <h2 class="white--text display-3 mb-3">Let's make something awesome</h2>
             </div>
 		<v-form class="form pa-5" ref="form">
       <v-text-field

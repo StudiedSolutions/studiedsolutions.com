@@ -1,5 +1,5 @@
-import Vue from 'vue'
 import 'babel-polyfill'
+import Vue from 'vue'
 import App from './App.vue'
 import Home from './Home.vue'
 import Vuetify from 'vuetify'
