@@ -203,7 +203,7 @@ import Axios from 'axios';
       },
       submit () {
         this.loading = true;
-        Axios.post('https://formspree.io/xekzzjkx',
+        Axios.post('https://formspree.io/xjrozjlx',
         {
           name: this.name,
           email: this.email,
